@@ -1,0 +1,28 @@
+#N canvas 253 233 491 359 10;
+#X obj 165 30 inlet;
+#X obj 159 213 readsf~;
+#X obj 104 294 dac~;
+#X obj 216 168 print;
+#X obj 159 298 outlet~;
+#X obj 230 300 outlet;
+#X msg 164 123 open \$2.wav \, 1;
+#X obj 96 228 *~;
+#X text 145 -7 input: play/not play: 0 or 1 (or above) filename: symbol
+;
+#X text 236 266 output from readsf~ ie audio \, and digit;
+#X obj 46 146 > 0;
+#X msg 42 97 \$1;
+#X obj 22 207 print;
+#X obj 164 59 list;
+#X text 41 264 DAC elr inte DAC;
+#X connect 0 0 13 0;
+#X connect 1 0 4 0;
+#X connect 1 0 7 1;
+#X connect 1 1 5 0;
+#X connect 6 0 1 0;
+#X connect 6 0 3 0;
+#X connect 10 0 7 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 13 0 11 0;
+#X connect 13 0 6 0;

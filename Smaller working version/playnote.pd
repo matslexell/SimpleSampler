@@ -1,0 +1,35 @@
+#N canvas 509 529 809 300 10;
+#X obj 148 15 inlet;
+#X obj 122 184 dac~;
+#X obj 126 138 readsf~;
+#X msg 148 52 open \$1.wav \, 1;
+#X obj 237 108 print;
+#X floatatom 316 58 5 0 0 0 - - -;
+#X obj 373 58 sel 0;
+#X obj 316 28 unpack f f;
+#X floatatom 425 75 5 0 0 0 - - -;
+#X text 414 55 velocity;
+#X obj 392 125 bng 15 250 50 0 empty empty empty 17 7 0 10 -204786
+-1 -1;
+#X obj 321 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -204786
+-1 -1;
+#X obj 416 111 s \$0-vel;
+#X obj 305 156 s \$1-bang_off;
+#X obj 391 156 s \$1-bang_key;
+#X msg 242 149 stop;
+#X connect 0 0 3 0;
+#X connect 0 0 7 0;
+#X connect 2 0 1 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;
+#X connect 3 0 2 0;
+#X connect 6 0 11 0;
+#X connect 6 1 8 0;
+#X connect 6 1 10 0;
+#X connect 6 1 12 0;
+#X connect 7 0 5 0;
+#X connect 7 1 6 0;
+#X connect 10 0 14 0;
+#X connect 11 0 13 0;
+#X connect 11 0 15 0;
+#X connect 15 0 2 0;
